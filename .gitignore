@@ -1,0 +1,13 @@
+# Editor and operating-system files
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Simulation outputs that can be large; commit selected results explicitly
+*.raw
+*.bak
+
+# Temporary Magic files
+*.ext.bak
+*.mag.bak
