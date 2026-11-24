@@ -64,6 +64,7 @@ SKY130_CMOS_Inverter/
 │   └── design-notes.md
 └── screenshots/            # Screenshots captured from this project
 ```
+![Project Directory](project_directory.png.jpeg)
 
 ## Design flow
 
@@ -80,12 +81,23 @@ Project files:
 - `xschem/cmos_inverter.sch` — inverter schematic
 - `xschem/cmos_inverter.sym` — reusable inverter symbol
 - `xschem/cmos_inv_tb.sch` — simulation testbench
+![CMOS Inverter Schematic](cmos_inverter.sch.jpeg)
+
+
+![CMOS Inverter Symbol](cmos_inverter_symbol.png.jpeg)
+
 
 ### 3. SPICE netlisting and simulation
 
+![Ngspice Simulation Output](ngspice_output.png.jpeg)
+
 Generate the SPICE netlist from Xschem and use the testbench to run a transient simulation with ngspice. Save the netlist, simulation log, and waveform generated from the actual project in the corresponding repository folders.
 
+![CMOS Inverter Transient Waveform](transient_waveform.png.jpeg)
+
+
 ### 4. Physical layout in Magic
+
 
 Create the layout using the SKY130A technology. The PMOS and NMOS devices must be placed and interconnected according to the schematic, including the required well and substrate contacts. Keep the Magic layout and any generated device-cell files together so that the layout can be reopened.
 
@@ -126,14 +138,8 @@ Use the local Netgen executable for LVS work:
 
 The exact LVS invocation depends on the netlist paths and the SKY130A setup file used. Record the command that is actually run along with its report.
 
-## Project documentation and screenshots
-
-Place screenshots captured from your own Xschem, simulation and Magic sessions in `screenshots/`. Useful evidence includes the inverter schematic, reusable symbol, testbench, transient waveform, physical layout, DRC output and LVS comparison. Do not use screenshots from another person's repository as evidence of this design.
 
 ## Author
 
 Ananya Mathapati
 
-## License
-
-No license has been selected for this repository. Add a license file if the project is to be distributed as open-source software.
